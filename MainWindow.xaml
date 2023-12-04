@@ -1,0 +1,94 @@
+﻿<Window x:Class="Google.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Google"
+        mc:Ignorable="d"
+        Title="Google" Height="450" Width="800">
+    <Grid Background="#212121">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <!--First Line-->
+        <WrapPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+            <TextBlock Style="{StaticResource Text}" Text="Почта" Margin="0, 0, 10, 0"/>
+            <TextBlock Style="{StaticResource Text}" Text="Картинки" Margin="0, 0, 10, 0"/>
+        </WrapPanel>
+
+        <!--GOOGLE-->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Style="{StaticResource Text}" Text="Google" FontSize="80"/>
+        </StackPanel>
+
+        <!--Text BOX-->
+        <Grid Grid.Row="2" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.8*"/>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="0.8*"/>
+            </Grid.ColumnDefinitions>
+
+
+
+            <TextBox Grid.Column="1" Background="#212121" Foreground="White" VerticalAlignment="Center">qwerty</TextBox>
+
+            <WrapPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <Button Style="{StaticResource ButtonTB}">
+                    <Image Source="Resources/keyboard.png" Stretch="Uniform"/>
+                </Button>
+                <Button Style="{StaticResource ButtonTB}">
+                    <Image Source="Resources/microphone.png" Stretch="Uniform"/>
+                </Button>
+                <Button Style="{StaticResource ButtonTB}">
+                    <Image Source="Resources/camera.png" Stretch="Uniform"/>
+                </Button>
+            </WrapPanel>
+
+        </Grid>
+        
+        <!--Buttons-->
+
+        <WrapPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Style="{StaticResource ButtonSearch}" Content="Поиск в Google"/>
+            <Button Style="{StaticResource ButtonSearch}" Content="Мне повезёт!"/>
+
+        </WrapPanel>
+
+        <!--Lower Text (First)-->
+        <Grid Grid.Row="4" Margin="0, 0, 0, 1" Background="#141414">
+            <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <TextBlock Style="{StaticResource Text}" Text="Украина" Margin="10, 0, 0, 0"/>
+            </WrapPanel>
+        </Grid>
+
+        <!--Lower Text (Second)-->
+
+        <Grid Grid.Row="5" Margin="0, 1, 0, 0" Background="#141414">
+
+            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBlock Style="{StaticResource Text}" Text="Всё о Google" Margin="10, 0, 10, 0"/>
+                <TextBlock Style="{StaticResource Text}" Text="Реклама" Margin="10, 0, 10, 0"/>
+                <TextBlock Style="{StaticResource Text}" Text="Для Бизнеса" Margin="10, 0, 10, 0"/>
+                <TextBlock Style="{StaticResource Text}" Text="Как Работает Google Поиск" Margin="10, 0, 10, 0"/>
+            </WrapPanel>
+
+            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+
+                <TextBlock Style="{StaticResource Text}" Text="Конфиденциальность" Margin="10, 0, 10, 0"/>
+                <TextBlock Style="{StaticResource Text}" Text="Условия" Margin="10, 0, 10, 0"/>
+                <TextBlock Style="{StaticResource Text}" Text="Настройки" Margin="10, 0, 10, 0"/>
+            </WrapPanel>
+        </Grid>
+
+    </Grid>
+</Window>
